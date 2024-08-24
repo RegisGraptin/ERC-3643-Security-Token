@@ -139,10 +139,15 @@ contract EncryptedERC20 is Ownable2Step {
         euint64 transferValue = TFHE.select(isTransferable, amount, TFHE.asEuint64(0));
         euint64 newBalanceTo = TFHE.add(balances[to], transferValue);
         balances[to] = newBalanceTo;
+
+        // Allow this new balance for both the contract and the owner.
         TFHE.allow(newBalanceTo, address(this));
         TFHE.allow(newBalanceTo, to);
+        
         euint64 newBalanceFrom = TFHE.sub(balances[from], transferValue);
         balances[from] = newBalanceFrom;
+
+        // Allow this new balance for both the contract and the owner.
         TFHE.allow(newBalanceFrom, address(this));
         TFHE.allow(newBalanceFrom, from);
         emit Transfer(from, to);

@@ -1,3 +1,14 @@
+
+# TODO
+
+    // https://eips.ethereum.org/EIPS/eip-3643
+
+    // https://www.zama.ai/post/confidential-erc-20-tokens-using-homomorphic-encryption
+    // TODO :: https://github.com/zama-ai/fhevm-contracts/blob/main/contracts/utils/EncryptedErrors.sol
+
+
+
+
 # Hardhat Template [![Open in Gitpod][gitpod-badge]][gitpod] [![Github Actions][gha-badge]][gha] [![Hardhat][hardhat-badge]][hardhat] [![License: MIT][license-badge]][license]
 
 [gitpod]: https://gitpod.io/#https://github.com/zama-ai/fhevm-hardhat-template

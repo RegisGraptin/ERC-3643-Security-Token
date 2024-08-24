@@ -38,7 +38,7 @@ interface IEncryptedERC20 {
     /**
      * @dev Returns the encrypted value of tokens owned by the owner.
      */
-    function balance(bytes32 publicKey) external view returns (bytes memory);
+    function balance() external view returns (euint64);
 
     /**
      * @dev Moves an `encryptedValue` amount of tokens from the caller's account to `to`.
@@ -60,11 +60,7 @@ interface IEncryptedERC20 {
      *
      * This value changes when {approve} or {transferFrom} are called.
      */
-    function allowance(
-        address owner, 
-        address spender, 
-        bytes32 publicKey
-    ) external returns (bytes memory);
+    function allowance(address owner, address spender) external returns (euint64);
 
     /**
      * @dev Sets a `value` amount of tokens as the allowance of `spender` over the
